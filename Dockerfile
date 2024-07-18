@@ -14,8 +14,5 @@ RUN mkdir -p /var/cache/nginx/client_temp && \
 RUN touch /var/run/nginx.pid && \
     chown -R nginx:nginx /var/run/nginx.pid /run/nginx.pid
 COPY expense.conf /etc/nginx/nginx.conf
-COPY static/* /usr/share/nginx/html/  \
-      && asset-manifest.json /usr/share/nginx/html/  \
-      && index.html /usr/share/nginx/html/  \
-      && package.json /usr/share/nginx/html/
-USER nginx 
+COPY code /usr/share/nginx/html/
+USER nginx
