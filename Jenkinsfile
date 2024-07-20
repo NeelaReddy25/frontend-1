@@ -3,7 +3,7 @@
 // create variable of map type and set the values
 
 def configMap = [
-    type: "nodejsEKSS",
+    type: "nodejsVM",
     component: "frontend",
     project: "expense"
 ]
